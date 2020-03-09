@@ -7,5 +7,6 @@ public class Main {
         System.out.println("Hello class!");
         System.out.println("This is your first Java application, I suppose?");
         System.out.print("Happy learning :-)");
+        System.out.print("Happy learning :-) commit test test test)");
     }
 }
