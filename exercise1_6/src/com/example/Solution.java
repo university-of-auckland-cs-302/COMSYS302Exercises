@@ -1,49 +1,60 @@
 package com.example;
 
 import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.lang.reflect.Array;
 import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan = new Scanner(System.in);
+    // Complete the birthdayCakeCandles function below.
+    static int birthdayCakeCandles(int[] ar) {
 
-        int n = scan.nextInt();  //lines
+        int max = 0;
+        int count = 0;
 
+        for(int i = 0; i< ar.length; i++){
 
-        //save numbers in an array list
+            if (ar[i] == max) count ++;
 
-        ArrayList<ArrayList<Integer>> rows = new ArrayList<>();
-
-        for(int i=0; i<n ; i++){
-
-            int d = scan.nextInt();
-            ArrayList<Integer> row = new ArrayList<>();
-            for(int j =0; j<d; j++){
-                row.add(scan.nextInt());
+            else if(ar[i]> max) {
+                max = ar[i];
+                count = 1;
             }
-            rows.add(row);
         }
 
-        //answer the queries
-        int q = scan.nextInt();
+        return count;
+    }
 
-        for (int i=0; i<q; i++){
-              int x = scan.nextInt();
-              int y = scan.nextInt();
 
-               try {
-                   System.out.println(rows.get(x - 1).get(y - 1));
-               } catch(Exception ex){
-                   System.out.println("ERROR!");
-               }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int arCount = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int[] ar = new int[arCount];
+
+        String[] arItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < arCount; i++) {
+            int arItem = Integer.parseInt(arItems[i]);
+            ar[i] = arItem;
         }
 
 
+        int result = birthdayCakeCandles(ar);
+
+        System.out.println(result);
+
+        scanner.close();
 
     }
 }
