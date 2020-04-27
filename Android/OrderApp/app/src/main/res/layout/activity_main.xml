@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="8dp"
-            android:hint="Your name" />
+            android:hint="Your email"
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,19 +28,24 @@
             android:textSize="24sp" />
 
         <CheckBox
-            android:id="@+id/checkbox_whipped_cream"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-
+            android:onClick="toppingsEventHandler"
             android:text="Whipped Cream" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-
-            android:layout_marginBottom="8dp"
+            android:onClick="toppingsEventHandler"
             android:text="Chocolate" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="toppingsEventHandler"
+            android:text="Vanilla" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,9 +123,19 @@
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="Your Total Order: "
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="24sp" />
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:onClick="composeEmail"
+            android:text="Confirm Order"
+            android:visibility="gone" />
     </LinearLayout>
 
 
