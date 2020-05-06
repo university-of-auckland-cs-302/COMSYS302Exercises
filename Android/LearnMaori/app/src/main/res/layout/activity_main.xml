@@ -9,11 +9,11 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_numbers"
         style="@style/CategoryCardStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#43A047"
-        android:onClick="showNumbersActivity"
         app:cardCornerRadius="4dp">
 
         <TextView
