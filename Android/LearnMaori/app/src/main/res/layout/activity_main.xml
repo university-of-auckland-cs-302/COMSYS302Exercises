@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        style="@style/CategoryCardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#43A047"
+        android:onClick="showNumbersActivity"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            style="@style/CategoryTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn Numbers" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CategoryCardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0288D1"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            style="@style/CategoryTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn Family Members" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CategoryCardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F4511E"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            style="@style/CategoryTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn Colors" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
