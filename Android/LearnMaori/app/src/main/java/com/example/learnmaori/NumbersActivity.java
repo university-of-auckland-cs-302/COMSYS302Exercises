@@ -1,10 +1,11 @@
 package com.example.learnmaori;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Map;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -13,8 +14,15 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        Intent thisIntent = getIntent();
-        String message = thisIntent.getStringExtra("MessageFromMainActivity");
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        //Testing the dictionary
+        Map<Integer, String> words = DataProvider.generateMaoriDigits();
+        String text = "";
+        for (Integer key : words.keySet()) {
+            text += String.valueOf(key) + " : " + words.get(key) + "\n";
+        }
+        TextView tempView = (TextView) findViewById(R.id.temp_text_view);
+        tempView.setText(text);
+
+
     }
 }
