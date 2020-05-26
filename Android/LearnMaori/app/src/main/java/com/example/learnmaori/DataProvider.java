@@ -1,6 +1,8 @@
 package com.example.learnmaori;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DataProvider {
@@ -17,6 +19,22 @@ public class DataProvider {
         words.put(8, "Waru");
         words.put(9, "Iwa");
         return words;
+    }
+
+    public static List<Number> getNumbers() {
+        List<Number> numbersList = new ArrayList<Number>();
+        Map<Integer, String> words = generateMaoriDigits();
+        for (Integer key : words.keySet()) {
+            int digit = key;
+            String maoriTranslation = words.get(key);
+            String icon = "icon" + String.valueOf(key);
+            String audio = "audio_" + String.valueOf(key);
+
+            Number n = new Number(digit, maoriTranslation, icon,  audio);
+            numbersList.add(n);
+        }
+
+        return numbersList;
     }
 
 }
