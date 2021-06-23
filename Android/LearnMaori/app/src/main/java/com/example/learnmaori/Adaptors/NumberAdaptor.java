@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.learnmaori.Models.INumber;
 import com.example.learnmaori.Models.Number;
 import com.example.learnmaori.R;
 
@@ -19,13 +20,24 @@ import java.util.List;
 
 public class NumberAdaptor extends ArrayAdapter {
 
-    int mLayoutID;
-    List<Number> mNumbers;
-    Context mContext;
+    private class ViewHolder {
+        ImageView iconImageView;
+        TextView maoriTextView;
+        ImageView play;
 
+        public ViewHolder(View currentListViewItem) {
+            iconImageView = currentListViewItem.findViewById(R.id.icon_image_view);
+            maoriTextView = currentListViewItem.findViewById(R.id.maori_text_view);
+            play = currentListViewItem.findViewById(R.id.play_image_view);
+        }
+    }
+
+    int mLayoutID;
+    List<INumber> mNumbers;
+    Context mContext;
     MediaPlayer mediaPlayer;
 
-    public NumberAdaptor(@NonNull Context context, int resource, @NonNull List<Number> objects) {
+    public NumberAdaptor(@NonNull Context context, int resource, @NonNull List<INumber> objects) {
         super(context, resource, objects);
         mLayoutID = resource;
         mContext = context;
@@ -42,27 +54,29 @@ public class NumberAdaptor extends ArrayAdapter {
         if (currentListViewItem == null) {
             currentListViewItem = LayoutInflater.from(getContext()).inflate(mLayoutID, parent, false);
         }
+        // Note a new ViewHolder object has to be created for every currentListViewItem
+        ViewHolder vh = new ViewHolder(currentListViewItem);
+
         //Get the Number object for the current position
-        Number currentNumber = mNumbers.get(position);
+        INumber currentNumber = mNumbers.get(position);
 
         //Set the attributed of list_view_number_item views
-        ImageView iconImageView = (ImageView) currentListViewItem.findViewById(R.id.icon_image_view);
         int i = mContext.getResources().getIdentifier(
                 currentNumber.getIconFileName(), "drawable",
                 mContext.getPackageName());
 
         //Setting the icon
-        iconImageView.setImageResource(i);
+        vh.iconImageView.setImageResource(i);
 
-        TextView maoriTextView = (TextView) currentListViewItem.findViewById(R.id.maori_text_view);
-        maoriTextView.setText(currentNumber.getMaoriTranslation());
+        // Setting the maori text
+        vh.maoriTextView.setText(currentNumber.getMaoriTranslation());
 
         //Getting the audio resource id for the current Number object
         final String audio = currentNumber.getAudioFilename();
-        final ImageView play = (ImageView) currentListViewItem.findViewById(R.id.play_image_view);
+        //vh.play = (ImageView) currentListViewItem.findViewById(R.id.play_image_view);
 
         //Setting the image click handler
-        play.setOnClickListener(new View.OnClickListener() {
+        vh.play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Operations to perform when the play ImageView is clicked

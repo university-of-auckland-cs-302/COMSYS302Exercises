@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.learnmaori.Adaptors.NumberAdaptor;
 import com.example.learnmaori.Data.DataProvider;
+import com.example.learnmaori.Models.INumber;
 import com.example.learnmaori.Models.Number;
 import com.example.learnmaori.R;
 
@@ -14,18 +15,27 @@ import java.util.List;
 
 public class NumbersActivity extends AppCompatActivity {
 
+    private class ViewHolder {
+        ListView listView;
+
+        public ViewHolder() {
+            listView = findViewById(R.id.listView);
+        }
+    }
+
+    ViewHolder vh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        //Testing the dictionary
-        List<Number> numbersList = DataProvider.getNumbers();
+        vh = new ViewHolder();
+
+        List<INumber> numbersList = DataProvider.getNumbers();
         NumberAdaptor itemsAdapter = new NumberAdaptor(this, R.layout.number_list_view_item,
                 numbersList);
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(itemsAdapter);
-
-
+        vh.listView = (ListView) findViewById(R.id.listView);
+        vh.listView.setAdapter(itemsAdapter);
     }
 }

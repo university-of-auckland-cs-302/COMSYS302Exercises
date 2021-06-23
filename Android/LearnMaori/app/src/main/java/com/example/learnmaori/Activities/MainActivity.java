@@ -11,17 +11,27 @@ import com.example.learnmaori.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    private class ViewHolder {
+        CardView numbersCardView;
+
+        public ViewHolder() {
+            numbersCardView = findViewById(R.id.card_view_numbers);
+        }
+    }
+
+    ViewHolder vh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CardView numbersCardView = (CardView) findViewById(R.id.card_view_numbers);
-        numbersCardView.setOnClickListener(new View.OnClickListener() {
+        vh = new ViewHolder();
+
+        vh.numbersCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent numbersIntent = new Intent(getBaseContext(), NumbersActivity.class);
-                numbersIntent.putExtra("MessageFromMainActivity", "This message came form Main Activity");
                 startActivity(numbersIntent);
             }
         });

@@ -1,5 +1,6 @@
 package com.example.learnmaori.Data;
 
+import com.example.learnmaori.Models.INumber;
 import com.example.learnmaori.Models.Number;
 
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public class DataProvider {
         return words;
     }
 
-    public static List<Number> getNumbers() {
-        List<Number> numbersList = new ArrayList<Number>();
+    public static List<INumber> getNumbers() {
+        List<INumber> numbersList = new ArrayList<INumber>();
         Map<Integer, String> words = generateMaoriDigits();
         for (Integer key : words.keySet()) {
             int digit = key;

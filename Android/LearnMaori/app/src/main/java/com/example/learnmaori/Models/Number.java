@@ -1,6 +1,8 @@
 package com.example.learnmaori.Models;
 
-public class Number {
+
+
+public class Number implements INumber{
 
     int digit;
     String audioFilename, iconFileName, maoriTranslation;
