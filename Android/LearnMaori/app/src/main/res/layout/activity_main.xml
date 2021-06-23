@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_numbers"

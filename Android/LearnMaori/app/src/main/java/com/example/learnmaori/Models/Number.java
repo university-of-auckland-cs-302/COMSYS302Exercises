@@ -1,4 +1,4 @@
-package com.example.learnmaori;
+package com.example.learnmaori.Models;
 
 public class Number {
 

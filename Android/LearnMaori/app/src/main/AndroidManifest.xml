@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".NumbersActivity"
+            android:name=".Activities.NumbersActivity"
             android:label="Learn Numbers"
             android:theme="@style/NumbersActivityTheme"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

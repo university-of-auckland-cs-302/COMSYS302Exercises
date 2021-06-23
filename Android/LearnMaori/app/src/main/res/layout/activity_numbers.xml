@@ -7,7 +7,7 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="10sp"
     android:padding="16dp"
-    tools:context=".NumbersActivity">
+    tools:context=".Activities.NumbersActivity">
 
 
 </ListView>

@@ -1,4 +1,6 @@
-package com.example.learnmaori;
+package com.example.learnmaori.Data;
+
+import com.example.learnmaori.Models.Number;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

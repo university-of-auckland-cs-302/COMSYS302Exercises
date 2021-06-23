@@ -1,9 +1,14 @@
-package com.example.learnmaori;
+package com.example.learnmaori.Activities;
 
 import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.learnmaori.Adaptors.NumberAdaptor;
+import com.example.learnmaori.Data.DataProvider;
+import com.example.learnmaori.Models.Number;
+import com.example.learnmaori.R;
 
 import java.util.List;
 

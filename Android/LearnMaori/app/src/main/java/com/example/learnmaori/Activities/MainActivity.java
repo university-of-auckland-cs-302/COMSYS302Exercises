@@ -1,4 +1,4 @@
-package com.example.learnmaori;
+package com.example.learnmaori.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.example.learnmaori.R;
 
 public class MainActivity extends AppCompatActivity {
 

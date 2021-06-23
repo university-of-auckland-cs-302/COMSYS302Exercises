@@ -1,4 +1,4 @@
-package com.example.learnmaori;
+package com.example.learnmaori.Adaptors;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.learnmaori.Models.Number;
+import com.example.learnmaori.R;
 
 import java.util.List;
 
