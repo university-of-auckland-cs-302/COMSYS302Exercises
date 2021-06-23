@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "497795995883",
+    "project_id": "learn-maori",
+    "storage_bucket": "learn-maori.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497795995883:android:b11d72845b54f2879746ae",
+        "android_client_info": {
+          "package_name": "com.example.learnmaori"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497795995883-lo6v75kci53s9g81qbl0ppf02a623ju5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg1xL6fzJZlv6Hh2JcKjC2be7IdJmVOMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497795995883-lo6v75kci53s9g81qbl0ppf02a623ju5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
