@@ -1,8 +1,7 @@
 package com.example.learnmaori.Models;
 
 
-
-public class Number implements INumber{
+public class Number implements INumber {
 
     int digit;
     String audioFilename, iconFileName, maoriTranslation;
@@ -28,5 +27,9 @@ public class Number implements INumber{
         this.digit = digit;
         this.iconFileName = iconFileName;
         this.maoriTranslation = maoriTranslation;
+    }
+
+    // Add a non-argument constructor to enable auto conversion of the Firebase documents to Number objects
+    public Number() {
     }
 }
