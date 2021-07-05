@@ -11,7 +11,11 @@
     <style name="NumbersActivityTheme" parent="AppTheme">
         <item name="colorPrimary">@color/appBarColorNumbersActivity</item>
         <item name="colorPrimaryDark">@color/appBarColorNumbersActivity</item>
+    </style>
 
+    <style name="ColorsActivityTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/appBarColorColorsActivity</item>
+        <item name="colorPrimaryDark">@color/appBarColorColorsActivity</item>
     </style>
 
     <style name="CategoryCardStyle">

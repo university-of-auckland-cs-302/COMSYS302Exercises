@@ -13,10 +13,11 @@ import com.example.learnmaori.R;
 public class MainActivity extends AppCompatActivity {
 
     private class ViewHolder {
-        CardView numbersCardView;
+        CardView numbersCardView, colorsCardView;
 
         public ViewHolder() {
             numbersCardView = findViewById(R.id.card_view_numbers);
+           colorsCardView = findViewById(R.id.colors_card_view);
         }
     }
 
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent numbersIntent = new Intent(getBaseContext(), NumbersActivity.class);
                 startActivity(numbersIntent);
+            }
+        });
+
+        vh.colorsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent colorsIntent = new Intent(getBaseContext(), ColorsActivity.class);
+                startActivity(colorsIntent);
             }
         });
 

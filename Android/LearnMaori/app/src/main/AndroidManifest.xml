@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Activities.ColorsActivity"
+            android:label="Learn Colors"
+            android:theme="@style/ColorsActivityTheme">
+
+        </activity>
+        <activity
             android:name=".Activities.NumbersActivity"
             android:label="Learn Numbers"
-            android:theme="@style/NumbersActivityTheme"></activity>
+            android:theme="@style/NumbersActivityTheme" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="appBarColorNumbersActivity">#546E7A</color>
+    <color name="appBarColorColorsActivity">#00838F</color>
 </resources>

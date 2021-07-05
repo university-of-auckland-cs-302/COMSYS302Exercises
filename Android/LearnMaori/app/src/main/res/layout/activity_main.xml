@@ -41,6 +41,7 @@
 
     <androidx.cardview.widget.CardView
         style="@style/CategoryCardStyle"
+        android:id="@+id/colors_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#F4511E"
