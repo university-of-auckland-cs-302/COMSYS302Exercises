@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="appBarColorNumbersActivity">#546E7A</color>
-    <color name="appBarColorColorsActivity">#00838F</color>
+    <color name="appBarColorNumbersActivity">#43A047</color>
+    <color name="appBarColorColorsActivity">#F4511E</color>
 </resources>
