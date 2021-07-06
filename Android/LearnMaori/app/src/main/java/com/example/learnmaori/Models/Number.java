@@ -1,25 +1,19 @@
 package com.example.learnmaori.Models;
 
 
-public class Number implements INumber {
+public class Number extends Items {
 
     int digit;
-    String audioFilename, iconFileName, maoriTranslation;
+    String iconFileName;
 
-    public int getDigit() {
-        return digit;
-    }
-
-    public String getAudioFilename() {
-        return audioFilename;
-    }
-
-    public String getIconFileName() {
+    @Override
+    public String getIconFilename() {
         return iconFileName;
     }
 
-    public String getMaoriTranslation() {
-        return maoriTranslation;
+    @Override
+    public int getDigit() {
+        return digit;
     }
 
     public Number(int digit, String maoriTranslation, String iconFileName, String audioFilename) {

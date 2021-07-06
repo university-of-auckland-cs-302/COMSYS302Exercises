@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.learnmaori.Adaptors.NumberAdaptor;
-import com.example.learnmaori.Models.INumber;
+import com.example.learnmaori.Models.IItems;
 import com.example.learnmaori.Models.Number;
 import com.example.learnmaori.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -46,7 +46,7 @@ public class NumbersActivity extends AppCompatActivity {
     }
 
     private void fetchNumbersData() {
-        List<INumber> numbersList = new LinkedList<INumber>();
+        List<IItems> numbersList = new LinkedList<IItems>();
 
         // Getting numbers collection from Firestore
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -55,7 +55,7 @@ public class NumbersActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     QuerySnapshot results = task.getResult();
-                    for (INumber aNumber : task.getResult().toObjects(Number.class)) {
+                    for (IItems aNumber : task.getResult().toObjects(Number.class)) {
                         numbersList.add(aNumber);
                         Log.i("Parsing numbers", aNumber.getDigit() + " loaded.");
                     }
@@ -75,7 +75,7 @@ public class NumbersActivity extends AppCompatActivity {
         });
     }
 
-    private void propagateAdaptor(List<INumber> data) {
+    private void propagateAdaptor(List<IItems> data) {
         NumberAdaptor itemsAdapter = new NumberAdaptor(this, R.layout.number_list_view_item,
                 data);
         vh.listView = findViewById(R.id.listView);

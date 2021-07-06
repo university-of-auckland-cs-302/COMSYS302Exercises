@@ -1,15 +1,13 @@
 package com.example.learnmaori.Data;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.learnmaori.Models.INumber;
+import com.example.learnmaori.Models.IItems;
 import com.example.learnmaori.Models.Number;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.jetbrains.annotations.NotNull;
@@ -18,8 +16,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import static android.content.ContentValues.TAG;
 
 public class DataProvider {
 
@@ -42,8 +38,8 @@ public class DataProvider {
     // Add number documents to Firestore
     public static void addNumberstoFirestore() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        List<INumber> numbersList = getNumbers();
-        for (INumber aNumber : numbersList) {
+        List<IItems> numbersList = getNumbers();
+        for (IItems aNumber : numbersList) {
             db.collection("numbers").document("number " + aNumber.getDigit()).set(aNumber).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
@@ -58,8 +54,8 @@ public class DataProvider {
         }
     }
 
-    public static List<INumber> getNumbers() {
-        List<INumber> numbersList = new ArrayList<INumber>();
+    public static List<IItems> getNumbers() {
+        List<IItems> numbersList = new ArrayList<IItems>();
         Map<Integer, String> words = generateMaoriDigits();
         for (Integer key : words.keySet()) {
             int digit = key;

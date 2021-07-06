@@ -2,18 +2,19 @@ package com.example.learnmaori.Adaptors;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.learnmaori.Models.INumber;
-import com.example.learnmaori.Models.Number;
+import com.example.learnmaori.Models.IItems;
 import com.example.learnmaori.R;
 
 import java.util.List;
@@ -33,11 +34,11 @@ public class NumberAdaptor extends ArrayAdapter {
     }
 
     int mLayoutID;
-    List<INumber> mNumbers;
+    List<IItems> mNumbers;
     Context mContext;
     MediaPlayer mediaPlayer;
 
-    public NumberAdaptor(@NonNull Context context, int resource, @NonNull List<INumber> objects) {
+    public NumberAdaptor(@NonNull Context context, int resource, @NonNull List<IItems> objects) {
         super(context, resource, objects);
         mLayoutID = resource;
         mContext = context;
@@ -58,11 +59,11 @@ public class NumberAdaptor extends ArrayAdapter {
         ViewHolder vh = new ViewHolder(currentListViewItem);
 
         //Get the Number object for the current position
-        INumber currentNumber = mNumbers.get(position);
+        IItems currentNumber = mNumbers.get(position);
 
         //Set the attributed of list_view_number_item views
         int i = mContext.getResources().getIdentifier(
-                currentNumber.getIconFileName(), "drawable",
+                currentNumber.getIconFilename(), "drawable",
                 mContext.getPackageName());
 
         //Setting the icon
