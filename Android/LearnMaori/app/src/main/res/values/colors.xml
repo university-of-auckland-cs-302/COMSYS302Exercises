@@ -6,4 +6,16 @@
 
     <color name="appBarColorNumbersActivity">#43A047</color>
     <color name="appBarColorColorsActivity">#F4511E</color>
+
+    <color name="red">#55F44336</color>
+    <color name="blue">#552962FF</color>
+    <color name="brown">#55795548</color>
+    <color name="orange">#55FF5722</color>
+    <color name="purple">#559C27B0</color>
+    <color name="grey">#559E9E9E</color>
+    <color name="black">#55000000</color>
+    <color name="white">#55FFFFFF</color>
+    <color name="green">#554CAF50</color>
+    <color name="pink">#55E91E63</color>
+    <color name="yellow">#55FFEB3B</color>
 </resources>

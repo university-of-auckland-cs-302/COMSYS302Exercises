@@ -78,7 +78,6 @@ public class NumbersActivity extends AppCompatActivity {
     private void propagateAdaptor(List<IItems> data) {
         ItemsAdaptor itemsAdapter = new ItemsAdaptor(this, R.layout.number_list_view_item,
                 data);
-        vh.listView = findViewById(R.id.listView);
         vh.listView.setAdapter(itemsAdapter);
         vh.listView.setVisibility(View.VISIBLE);
     }

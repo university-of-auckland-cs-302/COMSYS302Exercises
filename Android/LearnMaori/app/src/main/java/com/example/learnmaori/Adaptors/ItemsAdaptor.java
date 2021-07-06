@@ -135,7 +135,9 @@ public class ItemsAdaptor extends ArrayAdapter {
         // Note a new ViewHolder object has to be created for every currentListViewItem
         ColorsViewHolder vh = new ColorsViewHolder(currentListViewItem);
 
-        vh.colorRootView.setBackgroundColor(Color.parseColor(currentItem.getBackgroundColor()));
+        // Setting the background color
+        int i = mContext.getResources().getIdentifier(currentItem.getBackgroundColor(), "color", mContext.getPackageName());
+        vh.colorRootView.setBackgroundResource(i);
 
         vh.englishColorTextView.setText(currentItem.getEnglishColor());
 
