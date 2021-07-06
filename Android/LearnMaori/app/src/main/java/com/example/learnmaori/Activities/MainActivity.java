@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.learnmaori.Data.ColorsFirestoreDataProvider;
 import com.example.learnmaori.Data.DataProvider;
 import com.example.learnmaori.R;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         public ViewHolder() {
             numbersCardView = findViewById(R.id.card_view_numbers);
-           colorsCardView = findViewById(R.id.colors_card_view);
+            colorsCardView = findViewById(R.id.colors_card_view);
         }
     }
 
@@ -45,7 +46,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(colorsIntent);
             }
         });
-
     }
-
 }

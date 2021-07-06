@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.learnmaori.Adaptors.NumberAdaptor;
+import com.example.learnmaori.Adaptors.ItemsAdaptor;
 import com.example.learnmaori.Models.IItems;
 import com.example.learnmaori.Models.Number;
 import com.example.learnmaori.R;
@@ -76,7 +76,7 @@ public class NumbersActivity extends AppCompatActivity {
     }
 
     private void propagateAdaptor(List<IItems> data) {
-        NumberAdaptor itemsAdapter = new NumberAdaptor(this, R.layout.number_list_view_item,
+        ItemsAdaptor itemsAdapter = new ItemsAdaptor(this, R.layout.number_list_view_item,
                 data);
         vh.listView = findViewById(R.id.listView);
         vh.listView.setAdapter(itemsAdapter);
