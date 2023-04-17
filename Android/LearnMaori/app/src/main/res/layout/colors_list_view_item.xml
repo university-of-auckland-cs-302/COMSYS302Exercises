@@ -44,7 +44,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/maori-text_view"
+                android:id="@+id/maori_text_view"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

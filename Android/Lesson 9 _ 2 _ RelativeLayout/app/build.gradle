@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    compileSdk 33
+    buildToolsVersion '33.0.2'
 
+    namespace 'com.example.myapplication'
     defaultConfig {
         applicationId "com.example.myapplication"
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 

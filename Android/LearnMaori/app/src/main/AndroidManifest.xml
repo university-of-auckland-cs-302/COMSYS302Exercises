@@ -19,7 +19,9 @@
             android:name=".Activities.NumbersActivity"
             android:label="Learn Numbers"
             android:theme="@style/NumbersActivityTheme" />
-        <activity android:name=".Activities.MainActivity">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
