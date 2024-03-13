@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OrderApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Status Bar Styling -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Navigation Bar Styling -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name='materialButtonStyle'>@style/AppButton</item>
+
+        <item name="checkboxStyle">@style/MyCheckBox</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <!--
+        https://github.com/material-components/material-components-android/blob/master/docs/components/Checkbox.md
+        -->
+        <item name="buttonTint">#FFC107</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.Material3.Button.OutlinedButton">
+        <!--
+        https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md
+        -->
+        <item name="backgroundTint">#FFC107</item>
+    </style>
+
+
+    <style name="HeaderText">
+        <item name="android:textColor">#EF6C00</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="Theme.OrderApp" parent="Base.Theme.OrderApp" />
+</resources>
